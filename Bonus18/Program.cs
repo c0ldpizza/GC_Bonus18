@@ -17,7 +17,7 @@ namespace Bonus18
 
             for (int i = 0; i < numCars; i++)
             {
-                Console.WriteLine("Would you like to enter data for Car {0}? (y = yes/n = default)", i + 1);
+                Console.WriteLine("\nWould you like to enter data for Car {0}? (y = yes/n = default)", i + 1);
                 string defaultCar = Console.ReadLine().ToLower();
 
                 if (defaultCar == "y")
@@ -47,15 +47,16 @@ namespace Bonus18
                     Console.WriteLine("Invalid Input. Goodbye");
                     break;
                 }
-                
+
             }
 
             Console.Clear();
             Console.WriteLine("Car Data:");
+            Console.WriteLine("Year\tMake\tModel\tPrice");
             foreach (Car item in CarList)
             {
-                Console.WriteLine("{0} {1} {2}, ${3}.", item.Year, item.Make, item.Model, item.Price);
-            } 
+                Console.WriteLine("{0}\t{1}\t{2}\t${3}.", item.Year, item.Make, item.Model, item.Price);
+            }
         }
     }
 }
