@@ -22,7 +22,18 @@ namespace Bonus18
 
                 if (defaultCar == "y")
                 {
-                    Car Car = new Car("Chevy", "Astro", 2003, 2000.00);
+                    //Car Car = new Car("Chevy", "Astro", 2003, 2000.00);
+                    Car Car = new Car();
+
+                    Console.Write("Enter the Make:");
+                    Car.Make = Console.ReadLine();
+                    Console.Write("Enter the Model:");
+                    Car.Model = Console.ReadLine();
+                    Console.Write("Enter the Year:");
+                    Car.Year = int.Parse(Console.ReadLine());
+                    Console.Write("Enter the Price:");
+                    Car.Price = double.Parse(Console.ReadLine());
+
                     CarList.Add(Car);
                 }
                 else if (defaultCar == "n")
@@ -40,6 +51,7 @@ namespace Bonus18
 
             foreach (object item in CarList)
             {
+                
                 Console.WriteLine(item);
             }
         }
