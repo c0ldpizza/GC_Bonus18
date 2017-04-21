@@ -13,7 +13,7 @@ namespace Bonus18
             Console.WriteLine("How many cars would you like to enter data for?");
             int numCars = int.Parse(Console.ReadLine());
 
-            List<object> CarList = new List<object>(numCars);
+            List<Car> CarList = new List<Car>(numCars);
 
             for (int i = 0; i < numCars; i++)
             {
@@ -35,6 +35,7 @@ namespace Bonus18
                     Car.Price = double.Parse(Console.ReadLine());
 
                     CarList.Add(Car);
+                    //Console.WriteLine(Car.Make);
                 }
                 else if (defaultCar == "n")
                 {
@@ -49,11 +50,12 @@ namespace Bonus18
                 
             }
 
-            foreach (object item in CarList)
+            Console.Clear();
+            Console.WriteLine("Car Data:");
+            foreach (Car item in CarList)
             {
-                
-                Console.WriteLine(item);
-            }
+                Console.WriteLine("{0} {1} {2}, ${3}.", item.Year, item.Make, item.Model, item.Price);
+            } 
         }
     }
 }

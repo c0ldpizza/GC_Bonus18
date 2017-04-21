@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bonus18
 {
-    class Car
+    public class Car
     {
         //variables
         private string CarMake;
